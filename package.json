@@ -12,11 +12,14 @@
   "dependencies": {
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
+    "expo-localization": "^14.5.0",
+    "i18n-js": "^4.3.2",
     "react": "18.2.0",
     "react-native": "0.72.4",
     "react-redux": "^8.1.2",
     "redux-logger": "^3.0.6",
-    "reduxjs-toolkit-persist": "^7.2.1"
+    "reduxjs-toolkit-persist": "^7.2.1",
+    "expo": "^49.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

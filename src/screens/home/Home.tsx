@@ -1,9 +1,11 @@
 import {Text, View} from 'react-native';
 import styles from './style';
-function HomeScreen() {
+import {ICommonComponent} from '../../common/interfaces';
+
+function HomeScreen({i18n}: ICommonComponent) {
   return (
     <View style={styles.homeLayoutStyle}>
-      <Text>Home Screen</Text>
+      <Text>{i18n.t('helloWorld')}</Text>
     </View>
   );
 }
