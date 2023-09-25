@@ -1,11 +1,16 @@
-import {Text, View} from 'react-native';
-import styles from './style';
-import {ICommonComponent} from '../../common/interfaces';
+import { Text, View, Button } from "react-native";
+import styles from "./styles";
+import { useTranslation } from "../../hooks";
 
-function HomeScreen({i18n}: ICommonComponent) {
+function HomeScreen({ navigation }) {
+  const { lang } = useTranslation();
   return (
     <View style={styles.homeLayoutStyle}>
-      <Text>{i18n.t('helloWorld')}</Text>
+      <Text>{lang.home}</Text>
+      <Button
+        title={lang.goToDetails}
+        onPress={() => navigation.navigate(lang.details)}
+      />
     </View>
   );
 }

@@ -1,3 +1,3 @@
-import {store, persistor} from './store/Store';
-export {store, persistor};
-export * from './reducers';
+import { store } from "./store/Store";
+export { store };
+export * from "./reducers";

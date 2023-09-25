@@ -1,38 +1,16 @@
-import {combineReducers, configureStore} from '@reduxjs/toolkit';
-import {
-  persistReducer,
-  persistStore,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,
-} from 'reduxjs-toolkit-persist';
-import storage from 'reduxjs-toolkit-persist/lib/storage';
-import ReduxLogger from 'redux-logger';
-import {AuthReducer} from '../reducers';
-
-const persistConfig = {
-  key: 'root',
-  storage: storage,
-  blackList: ['auth'],
-};
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import ReduxLogger from "redux-logger";
+import { AuthReducer, SettingsReducer } from "../reducers";
 
 const reducers = combineReducers({
   auth: AuthReducer,
+  settings: SettingsReducer,
 });
-
-const _persistedReducer = persistReducer(persistConfig, reducers);
 
 const store = configureStore({
-  reducer: _persistedReducer,
-  middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }).concat(ReduxLogger),
+  reducer: reducers,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(ReduxLogger),
 });
-const persistor = persistStore(store);
-export {store, persistor};
+
+export { store };

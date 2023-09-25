@@ -1,4 +1,8 @@
 interface ILayout {
-  isDarkMode: boolean;
+  isDarkMode?: boolean;
+  lang: IKeys;
 }
-export type {ILayout};
+interface IKeys {
+  [key: string]: string;
+}
+export type { ILayout, IKeys };
