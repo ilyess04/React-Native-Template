@@ -1,4 +1,4 @@
 import useTranslation from "./useTranslation/useTranslation";
 import useAuthentification from "./useAuthentification/useAuthentification";
-
-export { useTranslation, useAuthentification };
+import useLanguages from "./useLangagues/useLanguages";
+export { useTranslation, useAuthentification, useLanguages };

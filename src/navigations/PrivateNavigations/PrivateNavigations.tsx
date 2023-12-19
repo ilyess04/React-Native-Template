@@ -1,18 +1,19 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { ILayout } from "../../common/interfaces";
 import HomeTabNavigations from "./HomeTabNavigations/HomeTabNavigations";
 import { DetailsScreen } from "../../screens";
+import { useTranslation } from "../../hooks";
 
-const PrivateNavigations = ({ lang }: ILayout): JSX.Element => {
+const PrivateNavigations = (): JSX.Element => {
   const Stack = createNativeStackNavigator();
+  const { tr } = useTranslation();
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={lang.home}
+        name={tr("home")}
         component={HomeTabNavigations}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name={lang.details} component={DetailsScreen} />
+      <Stack.Screen name={tr("details")} component={DetailsScreen} />
     </Stack.Navigator>
   );
 };

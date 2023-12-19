@@ -1,11 +1,14 @@
 import { Provider } from 'react-redux';
-import AppNavigations from './src/navigations/AppNavigations';
 import { store } from './src/common/redux';
+import AppNavigations from './src/navigations/AppNavigations';
+import { LangProvider } from './src/providers';
 
 export default function App() {
   return (
     <Provider store={store}>
-      <AppNavigations />
+      <LangProvider>
+        <AppNavigations />
+      </LangProvider>
     </Provider>
   );
 }

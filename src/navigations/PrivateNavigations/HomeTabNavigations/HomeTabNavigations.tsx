@@ -4,25 +4,25 @@ import { HomeScreen, SettingsScreen } from "../../../screens";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const HomeTabNavigations = (): JSX.Element => {
-  const { lang } = useTranslation();
+  const { tr } = useTranslation();
   const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator initialRouteName="PrivateNavigations" screenOptions={{}}>
       <Tab.Screen
-        name={lang.home}
+        name={tr("home")}
         component={HomeScreen}
         options={{
-          tabBarLabel: lang.home,
+          tabBarLabel: tr("home"),
           tabBarIcon: ({ color, size }) => (
             <Icon name="ios-home" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name={lang.settings}
+        name={tr("settings")}
         component={SettingsScreen}
         options={{
-          tabBarLabel: lang.settings,
+          tabBarLabel: tr("settings"),
           tabBarIcon: ({ color, size }) => (
             <Icon name="settings-sharp" color={color} size={size} />
           ),

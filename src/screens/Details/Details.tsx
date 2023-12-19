@@ -3,11 +3,11 @@ import { useTranslation } from "../../hooks";
 import styles from "./styles";
 
 const DetailsScreen = ({ navigation }): JSX.Element => {
-  const { lang } = useTranslation();
+  const { tr } = useTranslation();
   return (
     <View style={styles.detailsLayoutStyle}>
-      <Text>{lang.details}</Text>
-      <Button title={lang.returnToHome} onPress={() => navigation.goBack()} />
+      <Text>{tr("details")}</Text>
+      <Button title={tr("returnToHome")} onPress={() => navigation.goBack()} />
     </View>
   );
 };

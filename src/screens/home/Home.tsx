@@ -3,13 +3,13 @@ import styles from "./styles";
 import { useTranslation } from "../../hooks";
 
 function HomeScreen({ navigation }) {
-  const { lang } = useTranslation();
+  const { tr } = useTranslation();
   return (
     <View style={styles.homeLayoutStyle}>
-      <Text>{lang.home}</Text>
+      <Text>{tr("home")}</Text>
       <Button
-        title={lang.goToDetails}
-        onPress={() => navigation.navigate(lang.details)}
+        title={tr("goToDetails")}
+        onPress={() => navigation.navigate(tr("details"))}
       />
     </View>
   );

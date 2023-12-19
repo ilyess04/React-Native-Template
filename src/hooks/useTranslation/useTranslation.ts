@@ -1,13 +1,13 @@
-import { useSelector } from "react-redux";
-import { fr, en } from "../../i18n";
-import { IRootState } from "../../common/interfaces";
-import { ELang } from "../../common/enums";
+import { useContext } from "react";
+import { LangContext } from "../../common/contexts";
+
 const useTranslation = () => {
-  const storedLang = useSelector((state: IRootState) => state.settings).lang;
-  let lang = en;
-  if (storedLang == ELang.fr) {
-    lang = fr;
-  }
-  return { lang, storedLang };
+  const lang = useContext(LangContext);
+
+  const translate = (value: string) => {
+    return lang[value] ? lang[value] : value;
+  };
+
+  return { tr: translate };
 };
 export default useTranslation;

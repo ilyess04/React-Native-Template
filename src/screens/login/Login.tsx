@@ -9,7 +9,7 @@ import styles from "./styles";
 import { useTranslation } from "../../hooks";
 
 function LoginScreen() {
-  const { lang } = useTranslation();
+  const { tr } = useTranslation();
   const dispatch = useDispatch();
   const [loginState, setLoginState] = useState<ILoginState>(INIT_LOGIN_STATE);
 
@@ -22,19 +22,19 @@ function LoginScreen() {
       })
     );
   };
-  
+
   return (
     <View style={styles.container}>
       <Image source={ReactNativeLogoSrc} style={styles.logo} />
       <TextInput
         style={styles.input}
-        placeholder={lang.email}
+        placeholder={tr("email")}
         value={loginState.email}
         onChangeText={(text) => setLoginState({ ...loginState, email: text })}
       />
       <TextInput
         style={styles.input}
-        placeholder={lang.password}
+        placeholder={tr("password")}
         secureTextEntry
         value={loginState.password}
         onChangeText={(text) =>
@@ -42,7 +42,7 @@ function LoginScreen() {
         }
       />
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>{lang.reduxMe}</Text>
+        <Text style={styles.buttonText}>{tr("reduxMe")}</Text>
       </TouchableOpacity>
     </View>
   );
