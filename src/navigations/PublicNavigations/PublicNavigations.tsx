@@ -1,13 +1,14 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { LoginScreen } from "../../screens";
-import { ILayout } from "../../common/interfaces";
+import { useTranslation } from "../../hooks";
 
-const PublicNavigations = ({ lang }: ILayout): JSX.Element => {
+const PublicNavigations = (): JSX.Element => {
+  const { tr } = useTranslation();
   const Stack = createNativeStackNavigator();
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={lang.home}
+        name={tr("home")}
         component={LoginScreen}
         options={{ headerShown: false }}
       />
