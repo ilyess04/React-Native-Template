@@ -1,14 +1,17 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { DetailsScreen } from "../../screens";
 import { useTranslation } from "../../hooks";
-import HomeTabNavigations from "./homeTabNavigations/HomeTabNavigations";
 import { ENavigationsRoute } from "../../common/enums";
+import { colors } from "../../utilis";
+import HomeTabNavigations from "./homeTabNavigations/HomeTabNavigations";
 
 const PrivateNavigations = (): JSX.Element => {
   const Stack = createNativeStackNavigator();
   const { tr } = useTranslation();
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{ contentStyle: { backgroundColor: colors.secondary } }}
+    >
       <Stack.Screen
         name={ENavigationsRoute.homeNavigation}
         component={HomeTabNavigations}
