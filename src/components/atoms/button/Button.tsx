@@ -1,5 +1,5 @@
 import { Text, TouchableOpacity } from "react-native";
-import { IButton } from "../../common/interfaces";
+import { IButton } from "../../../common/interfaces";
 import styles from "./styles";
 
 const Button = ({ style, title, onPress }: IButton): JSX.Element => {

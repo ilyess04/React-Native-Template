@@ -1,5 +1,5 @@
 import { Image, View } from "react-native";
-import { ReactNativeLogoSrc } from "../../assets";
+import { reactNativeLogoSrc } from "../../assets";
 import { Button, Input } from "../../components";
 import { useTranslation } from "../../hooks";
 import { ILoginTemplate } from "../../common/interfaces";
@@ -13,7 +13,7 @@ const LoginTemplate = ({
   const { tr } = useTranslation();
   return (
     <View style={styles.container}>
-      <Image source={ReactNativeLogoSrc} style={styles.logo} />
+      <Image source={reactNativeLogoSrc} style={styles.logo} />
       <View style={{ paddingHorizontal: 16, width: "100%" }}>
         <Input
           placeholder={tr("email")}

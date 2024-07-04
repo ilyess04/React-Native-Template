@@ -1,5 +1,5 @@
 import { Text, TouchableOpacity } from "react-native";
-import { ITextButton } from "../../common/interfaces";
+import { ITextButton } from "../../../common/interfaces";
 import styles from "./styles";
 
 const TextButton = ({

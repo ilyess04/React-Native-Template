@@ -6,8 +6,8 @@ export default function LangProvider(props: {
   children: React.ReactNode;
 }): JSX.Element {
   const { getLangData } = useLanguages();
-  const type = getLangData();
+  const data = getLangData();
   return (
-    <LangContext.Provider value={type}>{props.children}</LangContext.Provider>
+    <LangContext.Provider value={data}>{props.children}</LangContext.Provider>
   );
 }

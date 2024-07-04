@@ -1,2 +1,3 @@
 import LangContext from "./langContext/LangContext";
-export { LangContext };
+import ModalContext from "./modalContext/ModalContext";
+export { LangContext, ModalContext };

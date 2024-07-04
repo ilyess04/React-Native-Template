@@ -1,2 +1,3 @@
 import LangProvider from "./langProvider/LangProvider";
-export { LangProvider };
+import DrawerProvider from "./modalProvider/ModalProvider";
+export { LangProvider, DrawerProvider };

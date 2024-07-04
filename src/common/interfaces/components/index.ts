@@ -1,4 +1,10 @@
-import { StyleProp, TextStyle, ViewStyle } from "react-native";
+import { ReactNode } from "react";
+import {
+  ImageSourcePropType,
+  StyleProp,
+  TextStyle,
+  ViewStyle,
+} from "react-native";
 
 interface IButton {
   style?: StyleProp<ViewStyle>;
@@ -16,7 +22,35 @@ interface ITextButton {
   style?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
   title: string;
-
   onPress?: () => void;
 }
-export type { IButton, IInput, ITextButton };
+interface IModal {
+  isVisible: boolean;
+  onClose?: () => void;
+  children?: ReactNode;
+}
+
+interface IChangeLangForm {
+  onSubmit: () => void;
+}
+interface ISelectLanguageItem {
+  isSelected: boolean;
+  title: string;
+  source: ImageSourcePropType;
+  onPress?: () => void;
+}
+
+interface IFlagAvatar {
+  style?: StyleProp<ViewStyle>;
+  source: ImageSourcePropType;
+}
+
+export type {
+  IButton,
+  IInput,
+  ITextButton,
+  IModal,
+  IChangeLangForm,
+  ISelectLanguageItem,
+  IFlagAvatar,
+};

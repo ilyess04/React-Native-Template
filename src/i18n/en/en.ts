@@ -1,15 +1,16 @@
 const en = {
-  helloWorld: "Hello world",
   home: "Home",
   settings: "Settings",
   login: "Login",
   email: "Email",
   password: "Password",
-  reduxMe: "Redux me",
   logout: "Logout",
-  selectLang: "Select Language:",
   details: "Details",
   goToDetails: "Go to Details",
-  returnToHome: "Return to home page",
+  returnToHome: "Return to Home page",
+  submit: "Submit",
+  clickToChangeLanguage: "Click to change language",
+  english: "English",
+  french: "French",
 };
 export default en;
