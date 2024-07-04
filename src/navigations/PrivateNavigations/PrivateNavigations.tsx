@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { DetailsScreen } from "../../screens";
 import { useTranslation } from "../../hooks";
 import HomeTabNavigations from "./homeTabNavigations/HomeTabNavigations";
+import { ENavigationsRoute } from "../../common/enums";
 
 const PrivateNavigations = (): JSX.Element => {
   const Stack = createNativeStackNavigator();
@@ -9,11 +10,15 @@ const PrivateNavigations = (): JSX.Element => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={tr("home")}
+        name={ENavigationsRoute.homeNavigation}
         component={HomeTabNavigations}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, title: tr("home") }}
       />
-      <Stack.Screen name={tr("details")} component={DetailsScreen} />
+      <Stack.Screen
+        name={ENavigationsRoute.details}
+        component={DetailsScreen}
+        options={{ title: tr("details") }}
+      />
     </Stack.Navigator>
   );
 };

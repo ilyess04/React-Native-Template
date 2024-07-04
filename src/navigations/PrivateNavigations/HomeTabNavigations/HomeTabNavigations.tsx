@@ -2,14 +2,15 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useTranslation } from "../../../hooks";
 import { HomeScreen, SettingsScreen } from "../../../screens";
 import Icon from "react-native-vector-icons/Ionicons";
+import { ENavigationsRoute } from "../../../common/enums";
 
 const HomeTabNavigations = (): JSX.Element => {
   const { tr } = useTranslation();
   const Tab = createBottomTabNavigator();
   return (
-    <Tab.Navigator initialRouteName="PrivateNavigations" screenOptions={{}}>
+    <Tab.Navigator initialRouteName="PrivateNavigations">
       <Tab.Screen
-        name={tr("home")}
+        name={ENavigationsRoute.home}
         component={HomeScreen}
         options={{
           tabBarLabel: tr("home"),
@@ -19,7 +20,7 @@ const HomeTabNavigations = (): JSX.Element => {
         }}
       />
       <Tab.Screen
-        name={tr("settings")}
+        name={ENavigationsRoute.settings}
         component={SettingsScreen}
         options={{
           tabBarLabel: tr("settings"),
