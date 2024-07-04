@@ -1,2 +1,2 @@
-import LangProvider from "./LangProvider/LangProvider";
+import LangProvider from "./langProvider/LangProvider";
 export { LangProvider };
