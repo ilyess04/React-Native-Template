@@ -5,9 +5,10 @@ import { ENavigationsRoute } from "../../../common/enums";
 import { colors } from "../../../utils";
 import Icon from "react-native-vector-icons/Ionicons";
 
+const Tab = createBottomTabNavigator();
+
 const HomeTabNavigations = (): JSX.Element => {
   const { tr } = useTranslation();
-  const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
       screenOptions={{

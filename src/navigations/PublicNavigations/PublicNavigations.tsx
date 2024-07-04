@@ -4,9 +4,10 @@ import { useTranslation } from "../../hooks";
 import { ENavigationsRoute } from "../../common/enums";
 import { colors } from "../../utils";
 
+const Stack = createNativeStackNavigator();
+
 const PublicNavigations = (): JSX.Element => {
   const { tr } = useTranslation();
-  const Stack = createNativeStackNavigator();
   return (
     <Stack.Navigator
       screenOptions={{ contentStyle: { backgroundColor: colors.secondary } }}

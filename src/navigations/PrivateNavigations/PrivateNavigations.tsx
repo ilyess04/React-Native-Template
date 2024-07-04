@@ -5,8 +5,9 @@ import { ENavigationsRoute } from "../../common/enums";
 import { colors } from "../../utils";
 import HomeTabNavigations from "./homeTabNavigations/HomeTabNavigations";
 
+const Stack = createNativeStackNavigator();
+
 const PrivateNavigations = (): JSX.Element => {
-  const Stack = createNativeStackNavigator();
   const { tr } = useTranslation();
   return (
     <Stack.Navigator
