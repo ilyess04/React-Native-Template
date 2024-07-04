@@ -8,7 +8,7 @@ const HomeTabNavigations = (): JSX.Element => {
   const { tr } = useTranslation();
   const Tab = createBottomTabNavigator();
   return (
-    <Tab.Navigator initialRouteName="PrivateNavigations">
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
         name={ENavigationsRoute.home}
         component={HomeScreen}
