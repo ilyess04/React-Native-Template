@@ -8,6 +8,6 @@ const useTranslation = () => {
     return lang[value] ? lang[value] : value;
   };
 
-  return { tr: translate };
+  return { lang, tr: translate };
 };
 export default useTranslation;
