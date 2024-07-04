@@ -6,7 +6,6 @@ const INIT_AUTH_REDUCER_STATE: IAuthReducer = {
   refreshToken: undefined,
   user: undefined,
 };
-
 const INIT_SETTINGS_STATE: ISettingsReducer = {
   lang: ELang.en,
 };

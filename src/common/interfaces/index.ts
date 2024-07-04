@@ -1,5 +1,7 @@
-export * from "./models";
 export * from "./redux";
-export * from "./layouts";
-export * from "./components";
 export * from "./states";
+
+interface IKeys {
+  [key: string]: string;
+}
+export type { IKeys };
