@@ -12,5 +12,11 @@ interface IInput {
   onChangeText?: (text: string) => void;
   type?: "password" | "text";
 }
+interface ITextButton {
+  style?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
+  title: string;
 
-export type { IButton, IInput };
+  onPress?: () => void;
+}
+export type { IButton, IInput, ITextButton };
