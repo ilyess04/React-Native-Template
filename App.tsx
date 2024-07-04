@@ -1,9 +1,9 @@
-import { Provider } from 'react-redux';
-import { store } from './src/common/redux';
-import AppNavigations from './src/navigations/AppNavigations';
-import { LangProvider } from './src/providers';
+import { Provider } from "react-redux";
+import { store } from "./src/common/redux";
+import { LangProvider } from "./src/providers";
+import AppNavigations from "./src/navigations/AppNavigations";
 
-export default function App() {
+const App = (): JSX.Element => {
   return (
     <Provider store={store}>
       <LangProvider>
@@ -11,4 +11,5 @@ export default function App() {
       </LangProvider>
     </Provider>
   );
-}
+};
+export default App;

@@ -6,7 +6,7 @@ import { Text, View, TextInput, Image, TouchableOpacity } from "react-native";
 import { useAuthentification, useTranslation } from "../../hooks";
 import styles from "./styles";
 
-function LoginScreen() {
+const LoginScreen = (): JSX.Element => {
   const { tr } = useTranslation();
   const { setCredentials } = useAuthentification();
   const [state, setState] = useState<ILoginState>(INIT_LOGIN_STATE);
@@ -36,5 +36,5 @@ function LoginScreen() {
       </TouchableOpacity>
     </View>
   );
-}
+};
 export default LoginScreen;

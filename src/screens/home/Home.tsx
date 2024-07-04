@@ -2,7 +2,7 @@ import { Text, View, Button } from "react-native";
 import styles from "./styles";
 import { useTranslation } from "../../hooks";
 
-function HomeScreen({ navigation }) {
+const HomeScreen = ({ navigation }): JSX.Element => {
   const { tr } = useTranslation();
   return (
     <View style={styles.homeLayoutStyle}>
@@ -13,5 +13,5 @@ function HomeScreen({ navigation }) {
       />
     </View>
   );
-}
+};
 export default HomeScreen;

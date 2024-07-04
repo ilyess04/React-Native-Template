@@ -1,9 +1,9 @@
 import { Text, View, TouchableOpacity } from "react-native";
-import styles from "./styles";
 import { useAuthentification, useLanguages, useTranslation } from "../../hooks";
 import { ELang } from "../../common/enums";
+import styles from "./styles";
 
-function SettingsScreen() {
+const SettingsScreen = (): JSX.Element => {
   const { tr } = useTranslation();
   const { logout } = useAuthentification();
   const { changeLang } = useLanguages();
@@ -28,5 +28,5 @@ function SettingsScreen() {
       </TouchableOpacity>
     </View>
   );
-}
+};
 export default SettingsScreen;
