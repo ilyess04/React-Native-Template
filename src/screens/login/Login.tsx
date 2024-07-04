@@ -1,4 +1,4 @@
-import { ReactNativeLogoSrc } from "../../publics";
+import { ReactNativeLogoSrc } from "../../assets";
 import { useState } from "react";
 import { ILoginState } from "../../common/interfaces";
 import { INIT_LOGIN_STATE } from "../../common/consts";
@@ -9,7 +9,7 @@ import styles from "./styles";
 function LoginScreen() {
   const { tr } = useTranslation();
   const { setCredentials } = useAuthentification();
-  const [loginState, setLoginState] = useState<ILoginState>(INIT_LOGIN_STATE);
+  const [state, setState] = useState<ILoginState>(INIT_LOGIN_STATE);
 
   const handleLogin = () => {
     setCredentials("accessToken", "refreshToken", 1);
@@ -21,20 +21,18 @@ function LoginScreen() {
       <TextInput
         style={styles.input}
         placeholder={tr("email")}
-        value={loginState.email}
-        onChangeText={(text) => setLoginState({ ...loginState, email: text })}
+        value={state.email}
+        onChangeText={(text) => setState({ ...state, email: text })}
       />
       <TextInput
         style={styles.input}
         placeholder={tr("password")}
         secureTextEntry
-        value={loginState.password}
-        onChangeText={(text) =>
-          setLoginState({ ...loginState, password: text })
-        }
+        value={state.password}
+        onChangeText={(text) => setState({ ...state, password: text })}
       />
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>{tr("reduxMe")}</Text>
+        <Text style={styles.buttonText}>{tr("login")}</Text>
       </TouchableOpacity>
     </View>
   );
