@@ -1,13 +1,17 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { useAuthentification } from "../hooks";
-import PrivateNavigations from "./PrivateNavigations/PrivateNavigations";
-import PublicNavigations from "./PublicNavigations/PublicNavigations";
+import PrivateNavigations from "./privateNavigations/PrivateNavigations";
+import PublicNavigations from "./publicNavigations/PublicNavigations";
 
 const AppNavigations = (): JSX.Element => {
-  const auth = useAuthentification();
+  const { accessToken, refreshToken, userId } = useAuthentification();
   return (
     <NavigationContainer>
-      {auth.accessToken ? <PrivateNavigations /> : <PublicNavigations />}
+      {accessToken && refreshToken && userId ? (
+        <PrivateNavigations />
+      ) : (
+        <PublicNavigations />
+      )}
     </NavigationContainer>
   );
 };

@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeTabNavigations from "./HomeTabNavigations/HomeTabNavigations";
 import { DetailsScreen } from "../../screens";
 import { useTranslation } from "../../hooks";
+import HomeTabNavigations from "./homeTabNavigations/HomeTabNavigations";
 
 const PrivateNavigations = (): JSX.Element => {
   const Stack = createNativeStackNavigator();
