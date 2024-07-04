@@ -10,7 +10,10 @@ const PrivateNavigations = (): JSX.Element => {
   const { tr } = useTranslation();
   return (
     <Stack.Navigator
-      screenOptions={{ contentStyle: { backgroundColor: colors.secondary } }}
+      screenOptions={{
+        contentStyle: { backgroundColor: colors.secondary },
+        headerTintColor: colors.primary,
+      }}
     >
       <Stack.Screen
         name={ENavigationsRoute.homeNavigation}
