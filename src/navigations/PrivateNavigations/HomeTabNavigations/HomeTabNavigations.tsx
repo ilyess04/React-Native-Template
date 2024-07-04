@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useTranslation } from "../../../hooks";
 import { HomeScreen, SettingsScreen } from "../../../screens";
 import { ENavigationsRoute } from "../../../common/enums";
-import { colors } from "../../../utilis";
+import { colors } from "../../../utils";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const HomeTabNavigations = (): JSX.Element => {

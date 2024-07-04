@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { LoginScreen } from "../../screens";
 import { useTranslation } from "../../hooks";
 import { ENavigationsRoute } from "../../common/enums";
-import { colors } from "../../utilis";
+import { colors } from "../../utils";
 
 const PublicNavigations = (): JSX.Element => {
   const { tr } = useTranslation();

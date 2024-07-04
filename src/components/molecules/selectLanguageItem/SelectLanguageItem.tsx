@@ -1,5 +1,5 @@
 import { Text, TouchableOpacity, View } from "react-native";
-import { colors } from "../../../utilis";
+import { colors } from "../../../utils";
 import { ISelectLanguageItem } from "../../../common/interfaces";
 import { FlagAvatar } from "../../atoms";
 import styles from "./styles";

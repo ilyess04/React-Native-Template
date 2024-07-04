@@ -1,5 +1,5 @@
 import { TextInput } from "react-native";
-import { colors } from "../../../utilis";
+import { colors } from "../../../utils";
 import { IInput } from "../../../common/interfaces";
 import styles from "./styles";
 

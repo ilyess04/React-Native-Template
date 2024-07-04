@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { DetailsScreen } from "../../screens";
 import { useTranslation } from "../../hooks";
 import { ENavigationsRoute } from "../../common/enums";
-import { colors } from "../../utilis";
+import { colors } from "../../utils";
 import HomeTabNavigations from "./homeTabNavigations/HomeTabNavigations";
 
 const PrivateNavigations = (): JSX.Element => {

@@ -2,7 +2,7 @@ import { Provider } from "react-redux";
 import { store } from "./src/common/redux";
 import { DrawerProvider, LangProvider } from "./src/providers";
 import { Platform, StatusBar } from "react-native";
-import { colors } from "./src/utilis";
+import { colors } from "./src/utils";
 import AppNavigations from "./src/navigations/AppNavigations";
 
 const App = (): JSX.Element => {
