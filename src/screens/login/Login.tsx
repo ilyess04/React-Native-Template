@@ -12,7 +12,7 @@ const LoginScreen = (): JSX.Element => {
   const { setCredentials } = useAuthentification();
   const [state, setState] = useState<ILoginState>(INIT_LOGIN_STATE);
 
-  const handleLogin = () => {
+  const handleSubmit = () => {
     setCredentials("accessToken", "refreshToken", 1);
   };
 
@@ -31,7 +31,7 @@ const LoginScreen = (): JSX.Element => {
           placeholder={tr("password")}
           onChangeText={(text) => setState({ ...state, password: text })}
         />
-        <Button title={tr("login")} onPress={handleLogin} />
+        <Button title={tr("login")} onPress={handleSubmit} />
       </View>
     </View>
   );

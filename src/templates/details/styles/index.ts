@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  detailsLayoutStyle: {
+  container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",

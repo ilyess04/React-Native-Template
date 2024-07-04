@@ -1,17 +1,13 @@
-import { View } from "react-native";
-import { useTranslation } from "../../hooks";
-import { TextButton } from "../../components";
-import styles from "./styles";
+import { ENavigationsRoute } from "../../common/enums";
+import { HomeTemplate } from "../../templates";
 
 const HomeScreen = ({ navigation }): JSX.Element => {
-  const { tr } = useTranslation();
   return (
-    <View style={styles.container}>
-      <TextButton
-        title={tr("goToDetails")}
-        onPress={() => navigation.navigate(tr("details"))}
-      />
-    </View>
+    <HomeTemplate
+      onNavigateToDetailsScreen={() =>
+        navigation.navigate(ENavigationsRoute.details)
+      }
+    />
   );
 };
 export default HomeScreen;
