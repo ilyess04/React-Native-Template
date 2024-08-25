@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useLanguages, useTranslation } from "../../../hooks";
 import { Button } from "../../atoms";
 import { ELang } from "../../../common/enums";
@@ -11,12 +11,17 @@ const ChangeLangForm = ({ onSubmit }: IChangeLangForm): JSX.Element => {
   const [selectedLang, setSelectedLang] = useState<ELang>(storedLang);
   const { tr } = useTranslation();
 
+  const langData = useMemo(
+    () => [
+      { label: tr("english"), value: ELang.en, src: enFlagImgSrc },
+      { label: tr("french"), value: ELang.fr, src: frFlagImgSrc },
+    ],
+    [tr]
+  );
+
   return (
     <>
-      {[
-        { label: tr("english"), value: ELang.en, src: enFlagImgSrc },
-        { label: tr("french"), value: ELang.fr, src: frFlagImgSrc },
-      ].map(({ label, value, src }, index) => (
+      {langData.map(({ label, value, src }, index) => (
         <SelectLanguageItem
           key={index}
           isSelected={value === selectedLang}
