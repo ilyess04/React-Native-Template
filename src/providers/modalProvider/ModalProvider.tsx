@@ -2,7 +2,7 @@ import { ReactNode, useState } from "react";
 import { Modal } from "../../components";
 import { ModalContext } from "../../common/contexts";
 
-export default function DrawerProvider(props: any): JSX.Element {
+export default function ModalProvider(props: any): JSX.Element {
   const [isOpenDrawer, setIsOpenDrawer] = useState<boolean>(false);
   const [children, setChildren] = useState<ReactNode | undefined>(undefined);
   return (
