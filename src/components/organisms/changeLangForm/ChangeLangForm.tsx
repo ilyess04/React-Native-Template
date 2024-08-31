@@ -1,13 +1,14 @@
-import { useMemo, useState } from "react";
-import { useLanguages, useTranslation } from "../../../hooks";
+import { useContext, useMemo, useState } from "react";
+import { useTranslation } from "../../../hooks";
 import { Button } from "../../atoms";
 import { ELang } from "../../../common/enums";
 import { IChangeLangForm } from "../../../common/interfaces";
 import { enFlagImgSrc, frFlagImgSrc } from "../../../assets";
 import { SelectLanguageItem } from "../../molecules";
+import { LangContext } from "../../../common/contexts";
 
 const ChangeLangForm = ({ onSubmit }: IChangeLangForm): JSX.Element => {
-  const { storedLang, changeLang } = useLanguages();
+  const { storedLang, changeLang } = useContext(LangContext);
   const [selectedLang, setSelectedLang] = useState<ELang>(storedLang);
   const { tr } = useTranslation();
 
