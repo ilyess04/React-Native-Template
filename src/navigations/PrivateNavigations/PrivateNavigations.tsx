@@ -3,7 +3,7 @@ import { DetailsScreen } from "../../screens";
 import { useTranslation } from "../../hooks";
 import { ENavigationsRoute } from "../../common/enums";
 import { colors } from "../../utils";
-import HomeTabNavigations from "./homeTabNavigations/HomeTabNavigations";
+import HomeTabNavigations from "./HomeTabNavigations/HomeTabNavigations";
 
 const Stack = createNativeStackNavigator();
 
